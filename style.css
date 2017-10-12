@@ -117,7 +117,7 @@ header {
 	left: 0;
 	width: 100%;
 	height: 91px;
-
+	z-index: 10;
 }
 
 header nav {
@@ -595,6 +595,7 @@ section.content .bottom-bar {
 
 section.content button.next-page {
 	width: 20%;
+	min-width: 120px;
 	display: inline-block;
 	float: right;
 	text-align: left;
@@ -622,14 +623,12 @@ section.content button.next-page:hover {
 .sidebar {
 	float: right;
 	display: inline-block;
-	width: 204px;
+	width: 200px;
 	margin-top: 2.75rem;
-	margin-left: 3.8rem;
-}
-
-.fixed {
-	position: fixed;
-	top: 90px;
+	margin-left: 3.4rem;
+	margin-right: 10px;
+	position: sticky;
+	top: 150px;
 }
 
 .sidebar aside.other {
@@ -721,6 +720,18 @@ section.content button.next-page:hover {
 	margin-top: 15px;
 }
 
+.sidebar aside.submission button.submit.forum::after {
+	content: 'Submit New Post ';
+}
+
+.sidebar aside.submission button.submit.event::after {
+	content: 'Create New Event ';
+}
+
+.sidebar aside.submission button.submit.club::after {
+	content: 'Make New Club ';
+}
+
 .sidebar aside.submission button.submit:hover {
 	background-color: #FDD835;
 }
@@ -792,5 +803,84 @@ footer .rights {
 	flex: 1 30%;
 }
 
-@media screen and {}
+/* Tablet*/
+
+@media screen and (max-width: 1010px) {
+
+	header nav .right {
+		margin-right: .5rem;
+	}
+
+	header nav .right a {
+		margin-left: .5rem;
+	}
+
+	.sidebar.main {
+		margin: 0 1.5rem 0 0;
+		top: 90px;
+		width: 17%;
+		min-width: 140px;
+		position: sticky;
+		float: right;
+	}
+
+	.sidebar.main aside.other {
+		display: none;
+	}
+
+	.sidebar {
+		position: relative;
+		width: 90%;
+		top: unset;
+		float: unset;
+		margin: 0 3rem 0 3rem;
+	}
+
+	.sidebar aside.other {
+		position: relative;
+		display: inline;
+	}
+
+	.sidebar aside.other ul.postings {
+		display: flex;
+
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+
+		flex-flow: row;
+		justify-content: space-around;
+	}
+
+	.sidebar aside.other ul.postings li {
+		flex: 1 1 auto;
+		font-size: 1rem;
+		font-weight: 600;
+	}
+
+
+	.sidebar aside.submission button.submit {
+		width:80% ;
+	}
+
+	.sidebar aside.submission button.submit.forum::after {
+	content: 'Forum ';
+	}
+
+	.sidebar aside.submission button.submit.event::after {
+		content: 'Event ';
+	}
+
+	.sidebar aside.submission button.submit.club::after {
+		content: 'Club ';
+	}
+
+}
+
+/* Mobile*/
+
+@media screen and (max-width: 670px) {
+	
+}
 
