@@ -1,0 +1,796 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End of Meyer Reset CSS */
+
+img {
+	max-width: 100%; /*makes images scale with flexible grids*/
+	display: block; /*removes tiny space added in some browsers below images */
+}
+
+html,body {
+	font-family: 'Raleway', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	text-decoration-line: none;
+	text-decoration-color: inherit;
+}
+
+a:visited {
+	text-decoration: none;
+	text-decoration-line: none;
+	color: inherit;
+}
+
+/* IE11 hide native button */
+select::-ms-expand {
+display: none;
+}
+
+#wrapper {
+	max-width: 1024px;
+	height: auto;
+	position: relative;
+	margin: 0 auto 0 auto;
+}
+
+/* Typography */
+
+h1 {
+	font-family: 'Bungee', sans-serif;
+	font-size: 2.3rem;
+}
+
+h2 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 100;
+	font-size: 1.2rem;
+}
+
+h3 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	font-size: 1.4rem;
+}
+
+h4 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+	font-size: 1.3rem;
+}
+
+/* Header and Nav*/
+
+header {
+	border-bottom: 7px solid #1C313A;
+	background-color: #455A64;
+	display: inline-block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 91px;
+
+}
+
+header nav {
+	max-width: 1024px;
+	margin: 0 auto;
+
+}
+
+header #logo {
+	display: inline-block;
+	width: 106px;
+	float: left;
+	margin-left: 1.2rem;
+	margin-top: 1.2rem;
+}
+
+header nav .left {
+	display: inline-block;
+	float: left;
+	margin-top: 3.8rem;
+	margin-left: 1rem;
+}
+
+header nav .left a {
+	display: inline-block;
+	width: 86px;
+	height: 20px;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	font-size: .9rem;
+	color: white;
+	text-decoration: none;
+}
+
+header nav .left a:hover {
+	border-bottom: 9px solid #FDD835;
+	color: #FDD835;
+}
+
+header nav .right {
+	display: inline-block;
+	float: right;
+	margin-top: 3.8rem;
+	margin-right: 1rem;
+}
+
+header nav .right a {
+	display: inline-block;
+	height: 20px;
+	padding: 0 5px 0 5px;
+	margin-left: .875rem;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	font-size: .9rem;
+	color: white;
+	text-decoration: none;
+}
+
+header nav .right a:hover {
+	border-bottom: 9px solid #FDD835;
+	color: #FDD835;
+}
+
+/* Hero*/
+
+.hero.main {
+	display: inline-block;
+	width: 100%;
+	height: 345px;
+	margin-bottom: 2.75rem;
+	background-image: url('images/hero.png');
+	background-origin: content-box;
+}
+
+.hero.article {
+	display: inline-block;
+	width: 100%;
+	height: 345px;
+	margin-top: 50px;
+	margin-bottom: .75rem;
+	background-image: url('images/hero-article.png');
+	background-origin: content-box;
+}
+
+.hero.article .hero.info {
+	padding-left: 30px;
+	padding-top: 80px;
+	color: white;
+}
+
+.hero.article .hero.info i {
+	display: inline-block;
+}
+
+.hero.article .hero.info h2 {
+	font-weight: 200;
+	letter-spacing: .2em;
+}
+
+.hero.article .hero.info h1 {
+	font-size: 3.5rem;
+	color: #FDD835;
+	margin-bottom: .3em;
+}
+
+.hero.article .hero.info .time {
+	display: inline-block;
+}
+
+.hero.article .hero.info .time i.fa {
+	font-size: 1.8rem;
+	color: #FDD835;
+}
+
+.hero.article .hero.info .time h3 {
+	display: inline-block;
+	margin-right: 5rem;
+	margin-left: 10px;
+	font-size: 1.8em;
+}
+
+.hero.article .hero.info .local {
+	margin-top: .8em;
+}
+
+.hero.article .hero.info .local i {
+	display: inline-block;
+	font-size: 1.8rem;
+	margin-right: 10px;
+	color: #FDD835;
+}
+
+.hero.article .hero.info .local h4 {
+	display: inline-block;
+}
+
+.hero.article .hero.info .social {
+	display: inline-block;
+	margin-right: 5rem;
+	margin-top: .8rem;
+}
+
+.hero.article .hero.info .social i {
+	display: inline-block;
+}
+
+.hero.article .hero.info .social h4 {
+	display: inline-block;
+}
+
+.hero.article .hero.info .star {
+	font-size: 1.8rem;
+	margin-top: .8rem;
+}
+
+.hero.article .hero.info .star:hover {
+	content: "\f006";
+	cursor: pointer;
+	color: #FDD835;
+}
+
+/* Main Content*/
+
+section.content {
+	width: 73.75%;
+	display: inline-block;
+	margin-bottom: 5rem;
+}
+
+section.content button.info {
+	display: inline-block;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+	font-size: 1.2em;
+	color: #718792;
+	border: none;
+	background: transparent;
+	padding: 0 15px 0 15px;
+	margin-left: 1.825rem;
+}
+
+section.content button.info:hover {
+	cursor: pointer;
+	color: #455A64;
+}
+
+section.content article {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	font-size: 1.15rem;
+	line-height: 1.5em;
+	margin-top: 1.5rem;
+	margin-left: 1.825rem;
+}
+
+section.content article p {
+	margin-bottom: 1.2rem;
+}
+
+section.content article b {
+	font-weight: 600;
+}
+
+section.content article ol {
+	list-style-type: disc;
+	margin-left: 2.65rem;
+	margin-bottom: 1.5rem;
+}
+
+section.content .respond {
+	border-top: 2px solid gray;
+	padding: 1.825rem;
+	margin-bottom: 1.825rem;
+}
+
+section.content .respond form.response {
+	display: inline-block;
+	width: 95%;
+	height: 235px;
+	background-color: #E6E6E6;
+	border: 2px solid #1C313A;
+	color: #1C313A;
+	padding: 10px;
+}
+
+section.content .respond form.response input#post-response {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+	font-size: 1rem;
+	background: transparent;
+	border: none;
+	width: 100%;
+	height: 80%;
+}
+
+section.content .respond form.response button {
+	background-color: #FDD835;
+	border: none;
+	float: right;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	font-size: 1.2rem;
+	padding: 10px;
+}
+
+section.content .respond form.response button:hover {
+	cursor: pointer;
+}
+
+section.content .comments {
+	margin-left: 1.825rem;
+}
+
+section.content .comments .inner {
+	margin-top: 1rem;
+}
+
+section.content .comments button:hover {
+	cursor: pointer;
+}
+
+section.content .comments button.quote {
+	background: transparent;
+	border: none;
+	color: #1C313A;
+}
+
+section.content .comments button.quote.collapse {
+	color: #718792;
+}
+
+section.content .comments .user-info {
+	font-size: .775em;
+	font-weight: 700;
+	padding-top: 1rem;
+}
+
+section.content .comments .user-info a {
+	margin-right: 5px;
+}
+
+section.content .comments .user-info .user {
+	color: #455A64;
+}
+
+section.content .comments .user-info .info {
+	color: #718792;
+} 
+
+section.content .comments .user-post .text {
+	margin-bottom: 10px;
+	margin-top: 10px;
+	line-height: 1.3em;
+}
+
+section.content .comments .user-post a {
+	font-size: .775em;
+	font-weight: 600;
+	color: #999999;
+	margin-right: 5px;
+}
+
+section.content .comments ul {
+	margin-left: 1.825rem;
+}
+
+section.content .comments ul .user-post {
+	margin-left: 1.825rem;
+}
+
+section.content .comments ul li {
+	border-left: 2px solid gray;
+	padding-left: 1.25rem;
+}
+
+section.content .filter {
+	margin-left: .825rem;
+	margin-bottom: 1.75rem;
+	height: 40px;
+}
+
+section.content .filter .type {
+	display: inline-block;
+	overflow: hidden;
+	background: url('images/downchevron.svg') no-repeat right 10px top 5px;
+	text-align: left;
+	width: 195px;
+	padding: 5px;
+	border: none;
+	background-color: #FDD835;
+	box-shadow: 3px 3px rgba(198, 167, 0, 1);
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	font-size: 1rem;
+}
+
+section.content .filter .type select {
+	background: transparent;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	font-size: 1.2rem;
+	border: none;
+	width: 120%;
+}
+
+section.content .filter .type:hover {
+	box-shadow: 2px 2px rgba(198, 167, 0, 1);
+	margin-left: 1px;
+	margin-top: 1px;
+}
+
+section.content .filter .type select:hover {
+	cursor: pointer;
+}
+
+section.content .filter .type:hover section.content .filter {
+	margin-bottom: 1.71rem;
+}
+
+section.content .filter button {
+	float: right;
+	background-color: #FDD835;
+	padding: 7px;
+	border: none;
+	box-shadow: 3px 3px rgba(198, 167, 0, 1);
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	font-size: 1rem;
+	margin-left: 20px;
+}
+
+section.content .filter button.local:hover {
+	box-shadow: 2px 2px rgba(198, 167, 0, 1);
+	margin-left: 1px;
+	margin-top: 1px;
+}
+
+section.content .filter button.timing:hover {
+	box-shadow: 2px 2px rgba(198, 167, 0, 1);
+	margin-left: 20px;
+	margin-top: 1px;
+}
+
+section.content .container {
+	display: flex;
+
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+
+	flex-flow: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+section.content .container .box {
+	display: inline-block;
+	height: 160px;
+	text-decoration: none;
+	color: white;
+	background-color: #1C313A;
+	margin-left: .825rem;
+	margin-bottom: 1.5rem;
+	padding-left: .875rem;
+	padding-top: .875rem;
+	box-shadow: 4px 4px 3px rgba(0, 0, 0, .5);
+}
+
+section.content .container .box:hover {
+	box-shadow: 2px 2px 3px rgba(0, 0, 0, .5);
+	margin-left: .85rem;
+}
+
+section.content .container .box:hover h1 {
+	color: #FDD835;
+}
+
+section.content .container .box h1 {
+	margin-top: .5rem;
+}
+
+section.content .container .box h3 {
+	margin-top: .6rem;
+}
+
+section.content .container .box .date {
+	display: inline-block;
+}
+
+section.content .container .box .time {
+	display: inline-block;
+	float: right;
+	margin-right: .875rem;
+}
+
+section.content .containter .box .clear {
+	clear: both;
+}
+
+section.content .container .box h4 {
+	display: inline-block;
+	margin-top: 2rem;
+}
+
+section.content .container .box .star {
+	font-size: 1.8rem;
+	float: right;
+	display: inline-block;
+	margin-right: .875rem;
+	margin-top: 1.7rem;
+}
+
+section.content .container .box.one {
+	flex: 1 1 auto;
+}
+
+section.content .container .box.two {
+	flex: 2 1 auto;
+}
+
+section.content .container .box.three {
+	flex: 3 1 auto;
+}
+
+section.content .container .box.four {
+	flex: 4 1 auto;
+}
+
+section.content .bottom-bar {
+	height: 42px;
+}
+
+section.content button.next-page {
+	width: 20%;
+	display: inline-block;
+	float: right;
+	text-align: left;
+	padding: 10px;
+	border: none;
+	background-color: #FDD835;
+	box-shadow: 3px 3px rgba(198, 167, 0, 1);
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	font-size: 1rem;
+}
+
+section.content button.next-page .fa {
+	float: right;
+}
+
+section.content button.next-page:hover {
+	box-shadow: 2px 2px rgba(198, 167, 0, 1);
+	margin-left: 1px;
+	margin-top: 1px;
+}
+
+/* Siderbar*/
+
+.sidebar {
+	float: right;
+	display: inline-block;
+	width: 204px;
+	margin-top: 2.75rem;
+	margin-left: 3.8rem;
+}
+
+.fixed {
+	position: fixed;
+	top: 90px;
+}
+
+.sidebar aside.other {
+	display: inline-block;
+
+}
+
+.sidebar aside.other .forum {
+	overflow: hidden;
+	width: 90%;
+	background: url('images/downchevron.svg') no-repeat right center;
+	padding: 5px;
+}
+
+.sidebar aside.other .forum select {
+	background: transparent;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	font-size: 1.2rem;
+	border: none;
+	width: 120%;
+}
+
+.sidebar aside.other .forum select:hover {
+	cursor: pointer;
+}
+
+.sidebar aside.other .more {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	font-size: 1.2rem;
+	width: 120%;
+	margin-bottom: 5px;
+}
+
+.sidebar aside.other a .more {
+	text-decoration: none;
+	color: black;
+}
+
+.sidebar aside.other a .more:hover {
+	color: #FDD835;
+}
+
+.sidebar aside.other ul.postings {
+	font-size: .875em;
+	font-weight: 600;
+	border-top: 2px solid gray;
+	border-bottom: 2px solid gray;
+	padding: 5px;
+}
+
+.sidebar aside.other ul.postings li {
+	padding: 5px;
+	margin-top: 3px;
+}
+
+.sidebar aside.other ul.postings li:hover {
+	background-color: #FDD835;
+}
+
+.sidebar aside.other ul.postings li a {
+	color: black;
+	overflow: hidden;
+	height: 16px;
+}
+
+.sidebar aside.other a.listings {
+	color: gray;
+	float: right;
+	font-size: .775rem;
+	padding-top: 5px;
+}
+
+.sidebar aside.submission {
+	margin-top: 1rem;
+	display: inline-block;
+}
+
+.sidebar aside.submission button.submit {
+	text-align: left;
+	border: 8px solid #FDD835;
+	background: transparent;
+	width: 100%;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	font-size: 1.1rem;
+	padding: 8px;
+	margin-top: 15px;
+}
+
+.sidebar aside.submission button.submit:hover {
+	background-color: #FDD835;
+}
+
+.sidebar aside.submission button.submit .fa {
+	float: right;
+}
+
+/* Footer*/ 
+
+a#return {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	font-size: .9em;
+	color: #666666;
+	text-align: center;
+	display: inline-block;
+	margin: 1em 43% .5em 43%;
+	text-decoration: none;
+}
+
+footer {
+	bottom: 0px;
+	width: 100%;
+	background-color: #1C313A;
+	border-top: 9px solid #718792;
+	height: 3rem;
+	bottom: 0;
+	padding-top: .875em;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-around;
+	font-family: 'Raleway', sans-serif;
+	font-size: .75em;
+	font-weight: 400;
+	line-height: 1.5em;
+	color: white;
+}
+
+footer .left {
+	flex: 1 30%;
+	margin-left: 5.27343%;
+}
+
+footer .left li {
+	display: inline-block;
+	margin-right: 2.75em;
+}
+
+footer .left li a {
+	color: white;
+}
+
+footer .center {
+	flex: .5 20%;
+	margin-left: 4.5em;
+}
+
+footer .center li {
+	display: inline-block;
+	margin-right: .75em;
+}
+
+footer .center li a {
+	color: white;
+}
+
+footer .rights {
+	flex: 1 30%;
+}
+
+
+
