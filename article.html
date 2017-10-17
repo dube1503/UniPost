@@ -28,18 +28,39 @@
 
     <body>
 
+        
+        <div id="mobile-nav">
+
+            <div class="nav-logo"></div>
+
+            <ul class="nav-buttons">
+
+                <li><i class="fa fa-user fa-lg"></i>PROFILE</li>
+                <li><i class="fa fa-star fa-lg"></i>FAVORITES</li>
+                <li><i class="fa fa-gear fa-lg"></i>SETTINGS</li>
+                <li><i class="fa fa-envelope fa-lg"></i>CONTACT</li>
+                <li><i class="fa fa-search fa-lg"></i>SEARCH</li>
+                
+            </ul>
+            
+        </div>
+
         <div id="wrapper">
             
             <header>
                 
                 <nav>
 
-                    <a href="index.html"><img src="images/logo.svg" id="logo"></img></a>
+                    <a id="mobile-menu"></a>
+
+                    <a id="logo" href="index.html"></a>
+
+                    <a id="mobile-post"></a>
                     
                     <ul class="left">
-                        <a href="#/"><li>EVENTS</li></a>
-                        <a href="#/"><li>CLUBS</li></a>
-                        <a href="#/"><li>FORUMS</li></a>
+                        <a class="mobile selected" href="#/"><li>EVENTS</li></a>
+                        <a class="mobile" href="#/"><li>CLUBS</li></a>
+                        <a class="mobile" href="#/"><li>FORUMS</li></a>
                         <a href="#/"><li>ABOUT</li></a>
                         <a href="#/"><li>CONTACT</li></a>
                     </ul>
@@ -285,8 +306,9 @@
 
 
         </footer>
-
-
     
     </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/actions.js"></script>
 </html>
