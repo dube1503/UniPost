@@ -90,7 +90,7 @@ h1 {
 
 h2 {
 	font-family: 'Raleway', sans-serif;
-	font-weight: 100;
+	font-weight: 200;
 	font-size: 1.2rem;
 }
 
@@ -384,6 +384,7 @@ section.content .respond form.response button:hover {
 
 section.content .comments {
 	margin-left: 1.825rem;
+	margin-right: 1rem;
 }
 
 section.content .comments .inner {
@@ -443,7 +444,7 @@ section.content .comments ul .user-post {
 	margin-left: 1.825rem;
 }
 
-section.content .comments ul li {
+section.content .comments ul.inner li {
 	border-left: 2px solid gray;
 	padding-left: 1.25rem;
 }
@@ -895,6 +896,79 @@ footer .rights {
 
 @media screen and (max-width: 670px) {
 
+	#mobile-nav {
+		width: 230px;
+		height: 100%;
+		background-color: #e6e6e6;
+		position: fixed;
+		z-index: 200;
+		transition: transform 0.3s;
+		top: 0;
+		left: 0;
+		transform: translateX(-100%);
+	}
+
+	#mobile-nav .nav-logo {
+		width: 100%;
+		height: 120px;
+		background-color: #455a64;
+	}
+
+	#mobile-nav .nav-logo .logo {
+		width: 60%;
+		margin: auto;
+		padding-top: 1em;
+	}
+
+	#mobile-nav .nav-logo .logo:after {
+		content: url(images/logo.svg);
+	}
+
+	#mobile-nav ul.nav-buttons {
+		font-family: "Bungee Hairline", sans-serif;
+		font-size: 1.5em;
+	}
+
+	#mobile-nav ul.nav-buttons li {
+		text-align: center;
+		padding: 15px;
+		border-bottom: 1px solid #cccccc;
+	}
+
+	#mobile-nav ul.nav-buttons li i {
+		float: left;
+		color: #1c313a;
+	}
+
+	#mobile-nav ul.center {
+		display: flex;
+		flex-flow: row;
+		justify-content: space-between;
+		margin: 0 auto;
+		width: 75%;
+		color: #1c313a;
+		margin-top: 8rem;
+	}
+
+	#mobile-nav p.rights {
+		font-family: 'Raleway', sans-serif;
+		font-size: .75em;
+		color: #1c313a;
+		margin-top: 1em;
+	}
+
+	#mobile-nav.active {
+		transform: translateX(0);
+	}
+
+	#wrapper {
+		transition: transform 0.3s;
+	}
+
+	#wrapper.active {
+		transform: translateX(230px);
+	}
+
 	header {
 		height: 50px;
 	}
@@ -949,7 +1023,7 @@ footer .rights {
 		width: 100%;
 		float: left;
 		margin-left: 0;
-		margin-top: 3.4rem;
+		margin-top: 3.5rem;
 		height: 38px;
 		display: flex;
 		flex-flow: row;
@@ -983,6 +1057,10 @@ footer .rights {
 	section.content {
 		width: 100%;
 		margin-top: 6rem;
+	}
+
+	section.content button.info {
+		margin-top: 1em;
 	}
 
 	section.content .filter {
@@ -1046,7 +1124,28 @@ footer .rights {
 		display: none;
 	}
 
+	section.content article {
+		margin-right: 1.425rem;
+		margin-left: 1.425rem;
+	}
+
+	section.content .respond {
+		display: none;
+	}
+
+	section.content .comments {
+		margin-left: 0;
+	}
+
 	.sidebar {
+		display: none;
+	}
+
+	a#return {
+		display: none;
+	}
+
+	footer {
 		display: none;
 	}
 	

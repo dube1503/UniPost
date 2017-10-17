@@ -1,15 +1,17 @@
-// Allows side bar to stick after scrolling past hero
-
+// Mobile slide-push nav.
 $(function () {
-    var sidebar = $('.sidebar.main');
-    var top = 302;
-  
-    $(window).scroll(function (event) {
-      var y = $(this).scrollTop();
-      if (y >= top) {
-        sidebar.addClass('fixed');
-      } else {
-        sidebar.removeClass('fixed');
-      }
-    });
+  var nav = $('#mobile-menu');
+  var menu = $('#mobile-nav');
+  var wrapper = $('#wrapper');
+
+  nav.click(function () {
+    if (!menu.hasClass("active")) {
+      menu.addClass("active");
+      wrapper.addClass("active");
+    } else {
+      menu.removeClass("active");
+      wrapper.removeClass("active");
+    }
+  });
+
 });
