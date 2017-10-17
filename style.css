@@ -81,7 +81,7 @@ display: none;
 	margin: 0 auto 0 auto;
 }
 
-#mobile-nav {
+#mobile-nav ul.center, #mobile-nav p.rights {
 	display: none;
 }
 
@@ -959,6 +959,7 @@ footer .rights {
 		font-size: .75em;
 		color: #1c313a;
 		margin-top: 1em;
+		display: inline-block;
 	}
 
 	#mobile-nav.active {
